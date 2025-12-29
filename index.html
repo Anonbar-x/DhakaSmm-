@@ -25,7 +25,7 @@
 </header><section>
   <h2>📦 ফলোয়ার প্যাকেজ</h2>
   <div class="packages">
-    <div class="card"><h3>200 Followers</h3><p class="price">৳30</p></div>
+    <div class="card"><h3>200 Followers</h3><p class="price">৳30</p><a class="order-btn" href="#order">অর্ডার করুন</a></div>
     <div class="card"><h3>500 Followers</h3><p class="price">৳60</p></div>
     <div class="card"><h3>1,000 Followers</h3><p class="price">৳110</p></div>
     <div class="card"><h3>5,000 Followers</h3><p class="price">৳499</p></div>
@@ -50,7 +50,7 @@
   </div>
 </section><section>
   <h2>📝 অর্ডার ফর্ম</h2>
-  <form onsubmit="sendOrder(event)">
+  <form id="order" onsubmit="sendOrder(event)">
     <input type="text" id="name" placeholder="আপনার নাম" required />
     <input type="text" id="page" placeholder="ফেসবুক পেইজ / প্রোফাইল লিংক" required />
     <select id="package" required>
@@ -85,7 +85,7 @@
     const note = document.getElementById('note').value;
 
     const text = `New Order%0AName: ${name}%0APage: ${page}%0APackage: ${pkg}%0ANote: ${note}`;
-    const phone = '8801936855849';
+    const phone = '8801627647776';
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   }
 </script></body>
