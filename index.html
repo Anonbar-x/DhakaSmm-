@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <title>SMM Package Order</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {font-family: Arial, sans-serif; background:#f5f7fa; margin:0; padding:0}
+    header {background:#0d6efd; color:#fff; padding:20px; text-align:center}
+    section {padding:20px}
+    h2 {color:#0d6efd}
+    .packages {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px}
+    .card {background:#fff; border-radius:10px; padding:15px; box-shadow:0 4px 10px rgba(0,0,0,.08)}
+    .card h3 {margin-top:0}
+    .price {font-size:20px; font-weight:bold; color:#198754}
+    .order-btn {margin-top:10px; display:inline-block; padding:10px 15px; background:#0d6efd; color:#fff; border-radius:6px; text-decoration:none}
+    form {background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,.08)}
+    input, select, textarea, button {width:100%; padding:10px; margin-top:10px}
+    button {background:#198754; color:#fff; border:none; border-radius:6px; font-size:16px}
+    footer {text-align:center; padding:15px; background:#eee; font-size:14px}
+  </style>
+</head>
+<body><header>
+  <h1>🔥 SMM স্পেশাল প্যাকেজ 🔥</h1>
+  <p>ফলোয়ার • ভিউজ • রিয়েক্ট — সহজ অর্ডার সিস্টেম</p>
+</header><section>
+  <h2>📦 ফলোয়ার প্যাকেজ</h2>
+  <div class="packages">
+    <div class="card"><h3>200 Followers</h3><p class="price">৳30</p></div>
+    <div class="card"><h3>500 Followers</h3><p class="price">৳60</p></div>
+    <div class="card"><h3>1,000 Followers</h3><p class="price">৳110</p></div>
+    <div class="card"><h3>5,000 Followers</h3><p class="price">৳499</p></div>
+    <div class="card"><h3>10,000 Followers</h3><p class="price">৳899</p></div>
+    <div class="card"><h3>20,000 Followers</h3><p class="price">৳1699</p></div>
+  </div>
+</section><section>
+  <h2>👁️ ভিডিও ভিউজ প্যাকেজ</h2>
+  <div class="packages">
+    <div class="card"><h3>1,000 Views</h3><p class="price">৳40</p></div>
+    <div class="card"><h3>3,000 Views</h3><p class="price">৳100</p></div>
+    <div class="card"><h3>5,000 Views</h3><p class="price">৳150</p></div>
+    <div class="card"><h3>10,000 Views</h3><p class="price">৳250</p></div>
+  </div>
+</section><section>
+  <h2>👍 পোস্ট রিয়েক্ট প্যাকেজ</h2>
+  <div class="packages">
+    <div class="card"><h3>100 React</h3><p class="price">৳25</p></div>
+    <div class="card"><h3>300 React</h3><p class="price">৳55</p></div>
+    <div class="card"><h3>500 React</h3><p class="price">৳75</p></div>
+    <div class="card"><h3>1,000 React</h3><p class="price">৳125</p></div>
+  </div>
+</section><section>
+  <h2>📝 অর্ডার ফর্ম</h2>
+  <form onsubmit="sendOrder(event)">
+    <input type="text" id="name" placeholder="আপনার নাম" required />
+    <input type="text" id="page" placeholder="ফেসবুক পেইজ / প্রোফাইল লিংক" required />
+    <select id="package" required>
+      <option value="">প্যাকেজ সিলেক্ট করুন</option>
+      <option>200 Followers - ৳30</option>
+      <option>500 Followers - ৳60</option>
+      <option>1,000 Followers - ৳110</option>
+      <option>5,000 Followers - ৳499</option>
+      <option>10,000 Followers - ৳899</option>
+      <option>20,000 Followers - ৳1699</option>
+      <option>1,000 Views - ৳40</option>
+      <option>3,000 Views - ৳100</option>
+      <option>5,000 Views - ৳150</option>
+      <option>10,000 Views - ৳250</option>
+      <option>100 React - ৳25</option>
+      <option>300 React - ৳55</option>
+      <option>500 React - ৳75</option>
+      <option>1,000 React - ৳125</option>
+    </select>
+    <textarea id="note" placeholder="অতিরিক্ত কিছু লিখতে চাইলে"></textarea>
+    <button type="submit">WhatsApp এ অর্ডার পাঠান</button>
+  </form>
+</section><footer>
+  📞 Order Support: 01936-855849 <br/>
+  🔐 No Login Required | 🚀 Instant Delivery
+</footer><script>
+  function sendOrder(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const page = document.getElementById('page').value;
+    const pkg = document.getElementById('package').value;
+    const note = document.getElementById('note').value;
+
+    const text = `New Order%0AName: ${name}%0APage: ${page}%0APackage: ${pkg}%0ANote: ${note}`;
+    const phone = '8801936855849';
+    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+  }
+</script></body>
+</html>
